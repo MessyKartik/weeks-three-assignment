@@ -22,12 +22,12 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: [true, "Password is required"],
-      select: false
+      select: false,
     },
     confirmPassword: {
       type: String,
       required: [true, "Please confirm your password"],
-    //   select: false
+      select: false
     },
     forgotPasswordToken: {},
     forgotPasswordExpiryDate: {},
@@ -37,21 +37,19 @@ const userSchema = new Schema(
   }
 );
 
-userSchema.pre('save', async function (next) {
-    if(!this.isModified('password') ){
-        return next();
-    }
-    this.password = await bcrypt.hash(this.password,10);
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
     return next();
-})
+  }
+  this.password = await bcrypt.hash(this.password, 10);
+  return next();
+});
 
 userSchema.methods = {
   jwtToken() {
-    return JWT.sign(
-      { id: this._id, email: this.email },
-      process.env.SECRET,
-      { expiresIn: '24h' }
-    );
+    return JWT.sign({ id: this._id, email: this.email }, process.env.SECRET, {
+      expiresIn: "24h",
+    });
   },
 };
 
