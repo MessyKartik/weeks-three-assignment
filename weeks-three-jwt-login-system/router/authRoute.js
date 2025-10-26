@@ -6,8 +6,10 @@ import {
   getUser,
   logout,
 } from "../controller/authController.js";
+
 import jwtAuth from "../middleware/jwtAuth.js";
 
+// Standard JWT auth routes
 authRouter.post("/signup", signup);
 authRouter.post("/signin", signin);
 authRouter.get("/user", jwtAuth, getUser);

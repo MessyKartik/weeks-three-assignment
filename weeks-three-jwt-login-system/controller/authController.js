@@ -52,7 +52,7 @@ const signin = async (req, res, next) => {
       });
     }
 
-    if (!bcrypt.compare(password,user.password,)) {
+    if (!(await bcrypt.compare(password, user.password))) {
       return res.status(400).json({
         success: false,
         message: "Wrong Password",
@@ -61,6 +61,7 @@ const signin = async (req, res, next) => {
 
     const token = user.jwtToken();
     user.password = undefined;
+    user.confirmPassword = undefined;
 
     const cookieOption = {
       maxAge: 24 * 60 * 60 * 1000,
@@ -117,7 +118,6 @@ const logout = async (req, res, next) => {
     return res.status(400).json({
       success: false,
       message: error.message,
-      
     });
   }
 };
