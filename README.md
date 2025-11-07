@@ -25,17 +25,12 @@ It includes practical implementations of **JWT-based authentication**, **Shopify
 
 ---
 
-## 🧩 Assignments Overview
-
-| # | Assignment | Description |
-|---|-------------|-------------|
-| 1️⃣ | **JWT-based Login & Protected Routes** | Implement JWT authentication with login & token-based access control. |
-| 2️⃣ | **Shopify OAuth Integration** | Integrate Shopify OAuth 2.0 for secure external app login. |
-| 3️⃣ | **GitHub Repo Fetch via API** | Use GitHub REST API and Postman to fetch personal repositories (without code libraries). |
-| 4️⃣ | **Documentation** | Record setup steps, challenges, and learnings in ClickUp. |
 
 ---
 
+📘 **Full Documentation:**  
+👉 [View detailed implementation steps & challenges in ClickUp](https://app.clickup.com/90161286992/v/dc/2kz0g3ug-1336)  
 
+---
 
 
