@@ -29,7 +29,7 @@ It includes practical implementations of **JWT-based authentication**, **Shopify
 ---
 
 📘 **Full Documentation:**  
-👉 [View detailed implementation steps & challenges in ClickUp](https://app.clickup.com/90161286992/v/dc/2kz0g3ug-1336)  
+👉 [View detailed implementation steps & challenges in ClickUp](https://doc.clickup.com/90161286992/p/h/2kz0g3ug-436/88afafc597d2769)  
 
 ---
 
